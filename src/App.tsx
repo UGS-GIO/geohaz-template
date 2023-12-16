@@ -1,5 +1,3 @@
-import arcgisDarkCss from '@arcgis/core/assets/esri/themes/dark/main.css?inline'
-import arcgisLightCss from '@arcgis/core/assets/esri/themes/light/main.css?inline'
 import { CalciteShell } from '@esri/calcite-components-react'
 import { useEffect } from 'react'
 import { useTheme } from './contexts/ThemeProvider'
@@ -13,7 +11,6 @@ export function App() {
   // Set the ArcGIS theme on the document head
   useEffect(() => {
     const style = document.createElement('style')
-    style.innerHTML = theme === 'dark' ? arcgisDarkCss : arcgisLightCss
     document.head.appendChild(style)
 
     return () => {
